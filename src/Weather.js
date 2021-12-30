@@ -27,19 +27,28 @@ export default function Weather() {
           </div>
         </div>
       </form>
+      <h1>City</h1>
+      <h4>Last updated:</h4>
       <div className="row">
-        <h2>City</h2>
-        <h3>Last updated:</h3>
-        <div className="col col-sm-6">
-          <img src="" alt="" />
-          <span>Temperature °C | °F</span>
+        <div className="col col-sm-7">
+          <div className="clearfix">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+              alt="Cloudy"
+              className="float-left"
+            />
+            <div className="float-left">
+              <span className="temperature">10 </span>
+              <span className="units">°C | °F</span>
+            </div>
+          </div>
         </div>
-        <div className="col col-sm-6">
+        <div className="col col-sm-5">
           <ul>
             <li>Description</li>
-            <li>Precipitation</li>
-            <li>Humidity</li>
-            <li>Wind</li>
+            <li>Precipitation:</li>
+            <li>Humidity:</li>
+            <li>Wind:</li>
           </ul>
         </div>
       </div>

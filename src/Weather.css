@@ -1,4 +1,64 @@
 .Weather {
-  border: 1px solid #000;
-  margin: 30px auto;
+  /* margin: 30px auto; */
+  font-family: "PT Mono", monospace;
+  /* max-width: 700px; */
+  /* text-align: center; */
+  padding: 30px;
+  border: 1px solid #f6d4de;
+  border-radius: 13px;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  background: linear-gradient(
+    106.7deg,
+    rgb(245, 167, 191) -6.2%,
+    rgb(201, 218, 238) 46.4%,
+    rgb(164, 240, 229) 86.4%
+  );
+}
+
+.Weather h1,
+h4 {
+  font-size: 34px;
+  text-align: center;
+  margin: 20px 0 0 0;
+  /* font-weight: 100; */
+  /* line-height: 28px; */
+}
+
+.Weather ul {
+  list-style: none;
+  margin: 15px 0 0 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.Weather li::first-letter {
+  text-transform: capitalize;
+}
+
+.Weather .btn {
+  position: block;
+  /* max-width: 83px;
+  max-height: 38px; */
+  border: 1px solid #d6d4d5;
+}
+.Weather img {
+  margin-right: 10px;
+  height: 90px;
+  width: 90px;
+}
+.Weather .temperature {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 100px;
+}
+
+.Weather .units {
+  position: relative;
+  font-size: 18px;
+  top: -30px;
+  left: -30px;
+}
+
+.Weather .float-left {
+  float: left;
 }
