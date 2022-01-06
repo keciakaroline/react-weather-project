@@ -55,8 +55,8 @@ h4 {
 .Weather .units {
   position: relative;
   font-size: 18px;
-  top: -30px;
-  left: -30px;
+  top: -35px;
+  left: -40px;
 }
 
 .Weather .float-left {
