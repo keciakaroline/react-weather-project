@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormatDate from "./FormatDate";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   // const [ready, setReady] = useState(false);
   function handleResponse(response) {
@@ -16,7 +17,7 @@ export default function Weather() {
       humidity: response.data.main.humidity,
       feels: response.data.main.feels_like,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      date: "01/01/01",
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -47,7 +48,9 @@ export default function Weather() {
           </div>
         </form>
         <h1>{weatherData.city}</h1>
-        <h4>Last updated: {weatherData.date}</h4>
+        <h3>
+          <FormatDate date={weatherData.date} />
+        </h3>
         <div className="row">
           <div className="col col-sm-7">
             <div className="clearfix">
@@ -80,8 +83,7 @@ export default function Weather() {
     );
   } else {
     const apiKey = "ce9e9a1384d8ee7b166d7542086e2fdc";
-    let city = "Bochum";
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";
