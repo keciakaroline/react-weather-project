@@ -59,6 +59,10 @@ h3 {
   left: -40px;
 }
 
+.Weather .units a {
+  text-decoration: none;
+}
+
 .Weather .float-left {
   float: left;
 }
