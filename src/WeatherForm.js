@@ -11,6 +11,7 @@ export default function WeatherForm({ handleCityChange, handleSubmit }) {
             className="form-control"
             autoFocus="on"
             onChange={handleCityChange}
+            rel="noopener noreferrer"
           />
         </div>
         <div className="col-sm-3">
