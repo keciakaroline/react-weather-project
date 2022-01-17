@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import WeatherForecastDay from "./WeatherForecastDay";
 import "./WeatherForecast.css";
 
 export default function WeatherForecast(props) {
@@ -15,22 +16,13 @@ export default function WeatherForecast(props) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col">
-            <div className="WeatherForecast-day">{forecast[0].dt}</div>
-            <img
-              src={forecast[0].weather[0].icon}
-              alt={forecast[0].weather[0].description}
-              className="WeatherForecast-icon"
-            />
-            <div className="WeatherForecast-temperatures">
-              <span className="WeatherForecast-temperature-max">
-                {forecast[0].temp.max}°C
-              </span>{" "}
-              <span className="WeatherForecast-temperature-min text-muted">
-                {forecast[0].temp.min}°C
-              </span>
-            </div>
-          </div>
+          {forecast.map(function (dailyForecast, index) {
+            return (
+              <div className="col">
+                <WeatherForecastDay data={forecast[0]} />
+              </div>
+            );
+          })}
         </div>
       </div>
     );
