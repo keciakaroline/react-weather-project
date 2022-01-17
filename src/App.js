@@ -10,7 +10,13 @@ export default function App() {
         <Weather defaultCity="Bochum" />
         <footer>
           This project was coded by{" "}
-          <a href="https://portfolio-keciasantos.netlify.app/">Kécia Santos</a>{" "}
+          <a
+            href="https://portfolio-keciasantos.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Kécia Santos
+          </a>{" "}
           and is{" "}
           <a
             href="https://github.com/keciasantos/react-weather-project"
@@ -18,6 +24,14 @@ export default function App() {
             rel="noopener noreferrer"
           >
             open-sourced on GitHub
+          </a>{" "}
+          and hosted on{" "}
+          <a
+            href="https://www.netlify.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Netlify.
           </a>
         </footer>
       </div>
