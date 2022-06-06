@@ -1,5 +1,5 @@
 # WEATHER APP
-Link for this project: https://react-weather-project-keciasantos.netlify.app/
+## Link for this project: https://react-weather-project-keciasantos.netlify.app/
 
 ## Techs used
 <p align="left">
