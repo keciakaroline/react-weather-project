@@ -12,6 +12,7 @@ export default function App() {
   const [location, setLocation] = useState({ q: "Lisbon" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
+  const [city, setCity] = useState("");
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -24,9 +25,15 @@ export default function App() {
 
   return (
     <div className="mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400">
-      <TopCities />
+      <TopCities setLocation={setLocation} />
 
-      <FormCity />
+      <FormCity
+        setLocation={setLocation}
+        units={units}
+        setUnits={setUnits}
+        city={city}
+        setCity={setCity}
+      />
 
       {weather && (
         <div>

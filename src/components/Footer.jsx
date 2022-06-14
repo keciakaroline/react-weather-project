@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="Footer">
+    <footer className="flex flex-row justify-center my-6">
       This project was coded by{" "}
       <a
         href="https://keciakaroline.com"
