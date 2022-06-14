@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import WeatherInfo from "./WeatherInfo";
+import WeatherInfo from "./WeatherInfo_try";
 //import WeatherForm from "./WeatherForm";
-import WeatherForecast from "./WeatherForecast";
+import WeatherForecast from "./WeatherForecast_try";
 import "./styles/Weather.css";
 
 export default function Weather(props) {
@@ -44,17 +44,17 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      // <div className="Weather">
-      //   <WeatherForm
-      //     handleCityChange={handleCityChange}
-      //     handleSubmit={handleSubmit}
-      //   />
-      //   <WeatherInfo data={weatherData} />
-      //   <WeatherForecast
-      //     data={weatherData}
-      //     coordinates={weatherData.coordinates}
-      //   />
-      // </div>
+      <div className="Weather">
+        <WeatherForm
+          handleCityChange={handleCityChange}
+          handleSubmit={handleSubmit}
+        />
+        <WeatherInfo data={weatherData} />
+        <WeatherForecast
+          data={weatherData}
+          coordinates={weatherData.coordinates}
+        />
+      </div>
     );
   } else {
     search();

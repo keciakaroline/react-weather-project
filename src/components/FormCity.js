@@ -1,42 +1,35 @@
 import React from "react";
 //import "./styles/Form.css";
 
-export default function Form({
-  inputCity,
-  setInputCity,
-  city,
-  setCity,
-  country,
-  setCountry,
-  searchCity,
-}) {
-  const min_length = 2;
-  const inputHandler = (event) => {
-    setInputCity(event.target.value);
-  };
+export default function FormCity() {
+  // const min_length = 2;
+  // const inputHandler = (event) => {
+  //   setInputCity(event.target.value);
+  //   setCountry(event.target.value);
+  // };
 
-  const handleClickGps = (event) => {
-    event.preventDefault();
-    //searchGeo();
-  };
+  // const handleClickGps = (event) => {
+  //   event.preventDefault();
+  //   //searchGeo();
+  // };
 
-  // Add a new city
-  const submitHandler = (event) => {
-    event.preventDefault();
-    searchCity();
-    setCity([
-      ...city,
-      {
-        text: inputCity,
-        id: Math.random() * 1000,
-      },
-    ]);
-    setInputCity("");
-  };
+  // // Add a new city
+  // const submitHandler = (event) => {
+  //   event.preventDefault();
+  //   searchCity();
+  //   setCity([
+  //     ...city,
+  //     {
+  //       text: inputCity,
+  //       id: Math.random() * 1000,
+  //     },
+  //   ]);
+  //   setInputCity("");
+  // };
 
   return (
-    <form className="container">
-      <div className="row">
+    <form>
+      {/* <div className="row">
         <div className="col-sm-8">
           <input
             type="search"
@@ -66,7 +59,7 @@ export default function Form({
             GPS{" "}
           </button>
         </div>
-      </div>
+      </div> */}
     </form>
   );
 }
