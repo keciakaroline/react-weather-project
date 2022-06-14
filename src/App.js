@@ -1,6 +1,6 @@
 import React from "react";
-import Weather from "./Weather";
-import "./App.css";
+import Weather from "./components/Weather";
+import "./styles/App.css";
 
 export default function App() {
   return (
@@ -11,27 +11,19 @@ export default function App() {
         <footer>
           This project was coded by{" "}
           <a
-            href="https://portfolio-keciasantos.netlify.app/"
+            href="https://keciakaroline.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Kécia Santos
+            Kécia Karoline
           </a>{" "}
-          and is{" "}
+          and here is the{" "}
           <a
             href="https://github.com/keciasantos/react-weather-project"
             target="_blank"
             rel="noopener noreferrer"
           >
-            open-sourced on GitHub
-          </a>{" "}
-          and hosted on{" "}
-          <a
-            href="https://www.netlify.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Netlify.
+            GitHub repository
           </a>
         </footer>
       </div>
