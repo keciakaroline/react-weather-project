@@ -8,6 +8,7 @@ import "./styles/Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [country, setCountry] = useState(props.defaultCountry);
 
   function handleResponse(response) {
     console.log(response.data);
@@ -15,6 +16,7 @@ export default function Weather(props) {
       ready: true,
       coordinates: response.data.coord,
       city: response.data.name,
+      country: response.data.sys.country,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
@@ -34,9 +36,13 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  // function handleClickGps(event) {
+  //   event.preventDefault();
+  // }
+
   function search() {
     const apiKey = "ce9e9a1384d8ee7b166d7542086e2fdc";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 

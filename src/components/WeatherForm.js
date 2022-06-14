@@ -4,7 +4,7 @@ export default function WeatherForm({ handleCityChange, handleSubmit }) {
   return (
     <form onSubmit={handleSubmit}>
       <div className="row">
-        <div className="col-sm-9">
+        <div className="col-sm-8">
           <input
             type="search"
             placeholder="Search a city..."
@@ -14,17 +14,21 @@ export default function WeatherForm({ handleCityChange, handleSubmit }) {
             rel="noopener noreferrer"
           />
         </div>
-        <div className="col-sm-3">
+        <div className="col-sm-2">
           <button type="submit" className="btn btn-light w-100">
             {" "}
             Search{" "}
           </button>
         </div>
-        {/* <div className="col col-sm-2">
-          <button type="submit" className="btn btn-light w-100">
+        <div className="col col-sm-2">
+          <button
+            // onClick={handleClickGps}
+            type="submit"
+            className="btn btn-light w-100"
+          >
             GPS{" "}
           </button>
-        </div> */}
+        </div>
       </div>
     </form>
   );
