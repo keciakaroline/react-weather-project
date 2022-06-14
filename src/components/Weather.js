@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
-import WeatherForm from "./WeatherForm";
+//import WeatherForm from "./WeatherForm";
 import WeatherForecast from "./WeatherForecast";
 import "./styles/Weather.css";
 
@@ -36,10 +36,6 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
-  // function handleClickGps(event) {
-  //   event.preventDefault();
-  // }
-
   function search() {
     const apiKey = "ce9e9a1384d8ee7b166d7542086e2fdc";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiKey}&units=metric`;
@@ -48,17 +44,17 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="Weather">
-        <WeatherForm
-          handleCityChange={handleCityChange}
-          handleSubmit={handleSubmit}
-        />
-        <WeatherInfo data={weatherData} />
-        <WeatherForecast
-          data={weatherData}
-          coordinates={weatherData.coordinates}
-        />
-      </div>
+      // <div className="Weather">
+      //   <WeatherForm
+      //     handleCityChange={handleCityChange}
+      //     handleSubmit={handleSubmit}
+      //   />
+      //   <WeatherInfo data={weatherData} />
+      //   <WeatherForecast
+      //     data={weatherData}
+      //     coordinates={weatherData.coordinates}
+      //   />
+      // </div>
     );
   } else {
     search();
