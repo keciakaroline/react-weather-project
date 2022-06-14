@@ -1,5 +1,4 @@
 import React from "react";
-import "./styles/TopCities.css";
 
 export default function TopCities() {
   const cities = [
@@ -25,10 +24,10 @@ export default function TopCities() {
     },
   ];
   return (
-    <div className="TopCities">
+    <div className="flex items-center justify-around my-6">
       {cities.map((city, index) => {
         return (
-          <button key={index} className="btn btn-primary">
+          <button key={index} className="text-white text-lg font-medium">
             {city.title}
           </button>
         );
