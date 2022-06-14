@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import WeatherForecastDay from "./WeatherForecastDay";
-import "./WeatherForecast.css";
+import WeatherForecastDay from "../WeatherForecastDay";
+import "./styles/WeatherForecast.css";
 
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
 
   useEffect(() => {
-    setLoaded(false); //trigger this if [props.coordinates] changes
+    setLoaded(false);
   }, [props.coordinates]);
 
   function handleResponse(response) {

@@ -3,7 +3,7 @@ import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForm from "./WeatherForm";
 import WeatherForecast from "./WeatherForecast";
-import "./Weather.css";
+import "./styles/Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -20,7 +20,6 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       feels: response.data.main.feels_like,
-      // icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
     });
