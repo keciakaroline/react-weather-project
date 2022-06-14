@@ -20,6 +20,11 @@ export default function WeatherForm({ handleCityChange, handleSubmit }) {
             Search{" "}
           </button>
         </div>
+        {/* <div className="col col-sm-2">
+          <button type="submit" className="btn btn-light w-100">
+            GPS{" "}
+          </button>
+        </div> */}
       </div>
     </form>
   );
