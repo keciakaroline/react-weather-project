@@ -8,7 +8,7 @@ export default function TopCities({ setLocation }) {
     },
     {
       id: 2,
-      title: "Toyko",
+      title: "Sydney",
     },
     {
       id: 3,
@@ -16,11 +16,11 @@ export default function TopCities({ setLocation }) {
     },
     {
       id: 4,
-      title: "Bochum",
+      title: "Berlin",
     },
     {
       id: 5,
-      title: "Lisbon",
+      title: "Spain",
     },
   ];
   return (

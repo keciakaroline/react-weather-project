@@ -2,12 +2,13 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-row justify-center my-6">
+    <footer className="text-center p-4 mt-10">
       This project was coded by{" "}
       <a
         href="https://keciakaroline.com"
         target="_blank"
         rel="noopener noreferrer"
+        className="text-emerald-100"
       >
         Kécia Karoline
       </a>{" "}
@@ -16,6 +17,7 @@ export default function Footer() {
         href="https://github.com/keciasantos/react-weather-project"
         target="_blank"
         rel="noopener noreferrer"
+        className="text-emerald-100"
       >
         Github repository
       </a>
